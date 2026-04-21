@@ -1,0 +1,10 @@
+Product ID,Price,Pricing Price,Competitor Prices,Discounts,Elasticity Index,Demand Prediction,Stock Risk,Risk Probability,Optimal Price,Max Revenue,AI Strategy
+4277,24.38,31.25,54.64,22.15,1.28,290.04462,HIGH RISK,97.6,39.06,24638.65,"1. Given the high stock risk, aim to restock only the necessary amount to meet the demand of 290.04 units while closely monitoring sales to prevent excess inventory.
+
+2. To optimize revenue, consider maintaining the suggested optimal price of $39.06 for this product in your retail store."
+5406,24.83,10.22,14.24,40.19,2.23,259.98438,LOW RISK,0.0,12.78,9959.91,"1. Given the low stock risk, focus on maintaining sufficient inventory levels to meet demand of 259.98 units while ensuring timely restocking.
+2. To maximize revenue, set the selling price at $12.78, taking advantage of the optimal pricing strategy for this product with an expected revenue of approximately $9959.91."
+5617,13.41,87.52,54.64,49.52,1.79,274.027,LOW RISK,0.0,109.4,74404.8," Maintain current stock levels due to low risk, while considering a price increase from the suggested optimal price of $109.4 to potentially boost revenue further and improve profit margins."
+7315,59.54,86.49,16.88,11.8,0.51,229.96437,LOW RISK,1.2,108.11,35221.5,"1. Maintain the current stock level due to low risk, as demand is consistent and above average.
+2. Set the selling price at $108.11 to maximize revenue and maintain profitability for Product 7315."
+2902,35.61,63.03,40.26,40.3,1.37,265.5292,LOW RISK,0.0,78.79,52016.33," Maintain current stock levels due to low risk and optimize pricing at $78.79 to maximize revenue and meet demand for Product 2902, ensuring a profitable return of approximately $52,016.33."
