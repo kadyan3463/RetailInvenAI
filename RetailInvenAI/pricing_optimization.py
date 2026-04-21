@@ -20,8 +20,11 @@ BG     = "white"      # figure background
 PANEL  = "#F4F6F9"   # subplot face (very light grey)
 
 
+import os
+
 def load_data():
-    return pd.read_csv("pricing_optimization.csv")
+    base_dir = os.path.dirname(__file__)
+    return pd.read_csv(os.path.join(base_dir, "pricing_optimization.csv"))
 
 
 def train_model():
