@@ -188,7 +188,7 @@ with st.sidebar:
         elasticity = st.number_input("Elasticity Index", 0.1, 5.0, 1.4, step=0.05)
 
     st.divider()
-    run_btn = st.button("▶ RUN OPTIMIZATION ENGINE", use_container_width=True)
+    run_btn = st.button("▶ RUN OPTIMIZATION ENGINE", width='stretch')
 
 # ── Welcome screen ────────────────────────────────────────────────────────────
 if not run_btn:
@@ -328,7 +328,7 @@ with row1_c1:
         height=350, showlegend=False,
         plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)"
     )
-    st.plotly_chart(fig_rev, use_container_width=True)
+    st.plotly_chart(fig_rev, width='stretch')
 
 # ── Chart 2: Stockout Risk Gauge ──────────────────────────────────────────────
 with row1_c2:
@@ -362,7 +362,7 @@ with row1_c2:
         margin=dict(l=30, r=30, t=60, b=20), height=350,
         paper_bgcolor="rgba(0,0,0,0)", font_color="#374151"
     )
-    st.plotly_chart(fig_gauge, use_container_width=True)
+    st.plotly_chart(fig_gauge, width='stretch')
 
 # ── Row 2 ──────────────────────────────────────────────────────────────────────
 row2_c1, row2_c2 = st.columns(2)
@@ -381,7 +381,7 @@ with row2_c1:
         margin=dict(l=20, r=20, t=30, b=20), height=300, showlegend=False,
         plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)"
     )
-    st.plotly_chart(fig_fi, use_container_width=True)
+    st.plotly_chart(fig_fi, width='stretch')
 
 # ── Chart 4: Inventory feature importance ────────────────────────────────────
 with row2_c2:
@@ -397,7 +397,7 @@ with row2_c2:
         margin=dict(l=20, r=20, t=30, b=20), height=300, showlegend=False,
         plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)"
     )
-    st.plotly_chart(fig_inv_fi, use_container_width=True)
+    st.plotly_chart(fig_inv_fi, width='stretch')
 
 # ── Chart 5: Cross-validation radar / bar ────────────────────────────────────
 st.markdown("#### 📐 Cross-Validation Performance (All Agents)")
@@ -421,7 +421,7 @@ fig_cv.update_layout(
     plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
     showlegend=False
 )
-st.plotly_chart(fig_cv, use_container_width=True)
+st.plotly_chart(fig_cv, width='stretch')
 
 st.divider()
 
@@ -499,6 +499,6 @@ def color_agent(val):
     }
     return colors.get(val, "")
 
-styled = out_df.style.applymap(color_agent, subset=["Agent"]) \
+styled = out_df.style.map(color_agent, subset=["Agent"]) \
                .set_properties(**{"font-size": "0.95rem", "border-bottom": "1px solid #f1f5f9"})
-st.dataframe(styled, use_container_width=True, hide_index=True)
+st.dataframe(styled, width='stretch', hide_index=True)
